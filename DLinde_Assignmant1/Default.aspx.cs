@@ -58,7 +58,9 @@ public partial class _Default : System.Web.UI.Page
         }// end outer if 
         else
         {
-            tip.TipPercent = double.Parse(OtherTextBox.Text);
+            // Converting the tip percentage into an actual 
+            // percentage for calculation. 
+            tip.TipPercent = double.Parse(OtherTextBox.Text) / 100;
         }
 
         ResultLabel.Text = "Amount: " + tip.MealAmount.ToString() + "<br/>" +
